@@ -21,6 +21,12 @@ class WidgetEstado extends StatelessWidget {
                 hintText: 'Informe a sigla do estado',
               ),
             ),
+            ElevatedButton(
+              child: Text('salvar'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
           ],
         ),
       ),
