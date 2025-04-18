@@ -21,6 +21,9 @@ class WidgetMenu extends StatelessWidget {
         WidgetBotao(rota: Rotas.estado, rotulo: 'Cadastro de Estado'),
         WidgetBotao(rota: Rotas.cidade, rotulo: 'Cadastro de Cidade'),
         WidgetBotao(rota: Rotas.pessoa, rotulo: 'Cadastro de Pessoa'),
+        WidgetBotao(rota: Rotas.listaPessoa, rotulo: 'Lista de Pessoas'),
+        WidgetBotao(rota: Rotas.listaCidade, rotulo: 'Lista de Cidades'),
+        WidgetBotao(rota: Rotas.listaEstado, rotulo: 'Lista de Estados'),
       ],
     );
   }

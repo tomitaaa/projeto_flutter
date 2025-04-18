@@ -1,3 +1,6 @@
+import 'package:aula1004/widget/widget_cidade_lista.dart';
+import 'package:aula1004/widget/widget_estado_lista.dart';
+import 'package:aula1004/widget/widget_pessoa_lista.dart';
 import 'package:flutter/material.dart';
 import 'package:aula1004/widget/widget_menu.dart';
 import 'package:aula1004/widget/widget_estado.dart';
@@ -19,6 +22,9 @@ class Aplicativo extends StatelessWidget {
         Rotas.estado: (context) => const WidgetEstado(),
         Rotas.cidade: (context) => const WidgetCidade(),
         Rotas.pessoa: (context) => const WidgetPessoa(),
+        Rotas.listaPessoa: (context) => WidgetPessoaLista(),
+        Rotas.listaCidade: (context) => WidgetCidadeLista(),
+        Rotas.listaEstado: (context) => WidgetEstadoLista(),
       },
     );
   }
