@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:aula1004/configuracao/rotas.dart';
 
 main() {}
 
@@ -42,12 +43,31 @@ class WidgetEstadoLista extends StatelessWidget {
                 child: Row(
                   children: [
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).pushNamed(Rotas.estado);
+                      },
                       icon: const Icon(Icons.edit),
                       color: Colors.green,
                     ),
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        showDialog(
+                          context: context,
+                          builder:
+                              (ctx) => AlertDialog(
+                                title: const Text('Remover Estado'),
+                                content: const Text('Negado!'),
+                                actions: [
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.of(ctx).pop();
+                                    },
+                                    child: const Text('OK'),
+                                  ),
+                                ],
+                              ),
+                        );
+                      },
                       icon: const Icon(Icons.delete),
                       color: Colors.red,
                     ),

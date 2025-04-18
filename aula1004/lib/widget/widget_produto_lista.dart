@@ -3,48 +3,47 @@ import 'package:aula1004/configuracao/rotas.dart';
 
 main() {}
 
-class WidgetCidadeLista extends StatelessWidget {
-  var cidades = [
+class WidgetProdutoLista extends StatelessWidget {
+  var produtos = [
     {
-      'nome': 'paranavai',
-      'estado': 'parana',
+      'nome': 'Ronaldo',
+      'categoria': 'joga muito no corinthians',
       'url':
-          'https://upload.wikimedia.org/wikipedia/commons/1/1a/Bandeira_de_paranava%C3%AD.jpg',
+          'https://tribunadonorte.com.br/wp-content/uploads/2023/07/54003.jpg',
     },
     {
-      'nome': 'itu',
-      'estado': 'sao paulo',
-      'url':
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Bandeira_de_Itu.jpg/2560px-Bandeira_de_Itu.jpg',
+      'nome': 'cade o chinelo',
+      'categoria': 'cade o chinelooooo',
+      'url': 'https://i.ytimg.com/vi/I1-imY24550/hqdefault.jpg',
     },
     {
-      'nome': 'xique xique',
-      'estado': 'bahea ',
+      'nome': 'eu nao intindi o que ela falou',
+      'categoria': 'WOOOOOOOOOOW',
       'url':
-          'https://upload.wikimedia.org/wikipedia/commons/9/97/Xique-Xique_-_bras%C3%A3o.jpg',
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdTpHrJToV5SskhrUHKoIl0JU9TvGP4u94Lg&s',
     },
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Lista de Cidades')),
+      appBar: AppBar(title: const Text('Lista de Produtos')),
       body: ListView.builder(
-        itemCount: cidades.length,
+        itemCount: produtos.length,
         itemBuilder:
             (context, contador) => ListTile(
               leading: CircleAvatar(
-                backgroundImage: NetworkImage('${cidades[contador]['url']}'),
+                backgroundImage: NetworkImage('${produtos[contador]['url']}'),
               ),
-              title: Text('${cidades[contador]['nome']}'),
-              subtitle: Text('${cidades[contador]['estado']}'),
+              title: Text('${produtos[contador]['nome']}'),
+              subtitle: Text('${produtos[contador]['categoria']}'),
               trailing: SizedBox(
                 width: 100,
                 child: Row(
                   children: [
                     IconButton(
                       onPressed: () {
-                        Navigator.of(context).pushNamed(Rotas.cidade);
+                        Navigator.of(context).pushNamed(Rotas.produto);
                       },
                       icon: const Icon(Icons.edit),
                       color: Colors.green,
@@ -55,7 +54,7 @@ class WidgetCidadeLista extends StatelessWidget {
                           context: context,
                           builder:
                               (ctx) => AlertDialog(
-                                title: const Text('Remover Cidade'),
+                                title: const Text('Remover Produto'),
                                 content: const Text('Negado!'),
                                 actions: [
                                   TextButton(
