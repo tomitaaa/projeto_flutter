@@ -9,4 +9,5 @@ class Rotas {
   static const String listaCidade = '/cidadeLista';
   static const String listaEstado = '/estadoLista';
   static const String listaProduto = '/produtoLista';
+  static const String lista = '/lista';
 }
